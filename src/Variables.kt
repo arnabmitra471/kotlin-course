@@ -39,6 +39,9 @@ fun main() {
     println("The min long value is $myMinLong")
     println("The max long value is $myMaxLong")
 
+    var letter:Char = 'K'
+    println(letter)
     println("Hello $firstName your age is $age !")
+
 
 }
