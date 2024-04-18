@@ -39,7 +39,7 @@ class Car(val name:String, val type:String,val batteryCapacity:Int,val year:Int,
     }
     fun driveCar(){
         println("$name is being driven")
-    }
+     }
     fun changeCoolent(){
         println("Coolent is being refilled")
     }
