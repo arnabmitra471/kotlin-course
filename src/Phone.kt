@@ -1,5 +1,5 @@
 fun main(){
-    val t1 = Tablet()
+    val t1 = Tablet(11)
     t1.powerOn()
     t1.accessInternet()
     t1.developApps()
@@ -12,6 +12,7 @@ fun main(){
     t1.getDeviceInfo()
     t1.powerOff()
     t1.display()
+    println(t1.toString())
 }
 open class Phone
 {
@@ -35,11 +36,12 @@ open class Phone
         println("Sending a message")
     }
 }
-open class SmartPhone : Phone()
+open class SmartPhone(versionParam: Int) : Phone()
 {
     override val name = "Realme"
     override val type = "Smartphone"
     override val color = "Yellow"
+    val version:Int = versionParam
     open fun takePicture(){
         println("Taking a picture")
     }
@@ -56,9 +58,10 @@ open class SmartPhone : Phone()
         println("The name of the phone is ${this.name}")
         println("The phone is a ${this.type}")
         println("The color of the phone is ${this.color}")
+        println("Your android version is $version")
     }
 }
-class Tablet:SmartPhone() {
+class Tablet(versionParam:Int):SmartPhone(versionParam) {
     override val name = "Samsung Galaxy Tab A"
     override val type = "Tablet"
     override val color = "white"
@@ -87,6 +90,10 @@ class Tablet:SmartPhone() {
         println("The name of the tablet is ${this.name}")
         println("The type of the device is ${this.type}")
         println("The color of the device is ${this.color}")
+    }
+
+    override fun toString(): String {
+        return "name - $name type - $type"
     }
 
 }
