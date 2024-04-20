@@ -28,11 +28,24 @@ fun main(){
 
     val circle = Circle1(34.5)
 
-    if(circle is Circle1)
-    {
-        println("This is a circle")
-    }
+    val arr = arrayOf(circle,s1,s2,p1)
 
+    for(obj in arr)
+    {
+        if(obj is Circle1)
+        {
+            println(obj.area())
+        }
+        else if(obj is Square1)
+        {
+            println(obj.area())
+        }
+        else
+        {
+            (obj as Player).clone()
+            obj.sayName()
+        }
+    }
 }
 
 interface Draggable
@@ -117,6 +130,10 @@ class Player(val name:String,val age:Int):Draggable,Cloneable
 {
     override val dragSpeed: Int = 12
     override val cloneCount: Int = 34
+
+    fun sayName(){
+        println("The name of the player is $name")
+    }
     override fun drag(){
         println("$name is dragging and his age is $age")
         println("The dragging speed of player is $dragSpeed")
@@ -125,6 +142,4 @@ class Player(val name:String,val age:Int):Draggable,Cloneable
     override fun clone() {
         println("Cloning player $cloneCount times")
     }
-
-
 }
