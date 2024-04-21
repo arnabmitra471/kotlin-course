@@ -1,29 +1,29 @@
 fun main(){
-    val bd1 = BullDog("Tommy",12)
+    val bd1:Runnable = BullDog("Tommy",12)
 
 
-    val bd2 = BullDog("Snoopy",12)
+    val bd2:Runnable = BullDog("Snoopy",12)
 
 
-    val bd3 = BullDog("Dora",12)
+    val bd3:Runnable = BullDog("Dora",12)
 
 
-    val d1 = Dog("Dora",12)
+    val d1:Runnable = Dog("Dora",12)
 
-    val d2 = Dog("Barbie",12)
+    val d2:Runnable = Dog("Barbie",12)
 
-    val h1 = Human("Mahesh Sharma",21,21)
+    val h1:Runnable = Human("Mahesh Sharma",21,21)
 
-    val h2 = Human("Ramjeevan Bhatt",32,32)
+    val h2:Runnable = Human("Ramjeevan Bhatt",32,32)
 
-    val r1 = Rabbit("Sherlock",9)
+    val r1:Runnable = Rabbit("Sherlock",9)
 
 
 
 
     // Creating an array of objects
 
-    val arr: Array<Animal> = arrayOf(bd1,bd2,bd3,d1,d2,h1,h2,r1)
+    val arr: Array<Runnable> = arrayOf(bd1,bd2,bd3,d1,d2,h1,h2,r1)
 
     for(obj in arr)
     {
