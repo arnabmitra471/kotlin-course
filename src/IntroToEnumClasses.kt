@@ -17,6 +17,7 @@ fun main(){
     println(Day.entries)
     day.printFormattedDay()
     println(day.number)
+
 }
 enum class Day(val number:Int)
 {
